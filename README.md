@@ -6,6 +6,10 @@ practical modern units (feet, inches, centimetres, metres).
 
 All calculations run entirely in the browser — no backend, no network calls.
 
+Open source and open to public contributions — see the
+[contributing guide](./CONTRIBUTING.md) or the
+[GitHub repository](https://github.com/vineethkv96/kerala-vasthu).
+
 ## Features
 
 - **Room Size Calculator** — enter length, width and optional height in any unit,
@@ -98,6 +102,19 @@ src/
   App.tsx         # navigation + language + seed wiring
   types.ts        # shared TypeScript types
 ```
+
+## Contributing
+
+Contributions are welcome — bug reports, feature requests, docs, and pull
+requests.
+
+- **Report issues or suggest features** via
+  [GitHub Issues](https://github.com/vineethkv96/kerala-vasthu/issues).
+- **Contribute code** by forking the repo and opening a pull request against
+  `main`. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the workflow.
+
+The project is MIT-licensed and runs fully client-side, so there's no backend to
+set up — just `pnpm install && pnpm dev`.
 
 ## Disclaimer
 

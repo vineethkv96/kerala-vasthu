@@ -1,5 +1,7 @@
-import { Coffee, Languages } from "lucide-react";
+import { Coffee, Github, Languages } from "lucide-react";
 import { useI18n } from "../i18n";
+
+const GITHUB_URL = "https://github.com/vineethkv96/kerala-vasthu";
 
 export default function Header() {
   const { lang, toggle, t } = useI18n();
@@ -24,6 +26,16 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-1">
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost text-xs"
+            aria-label={t("View on GitHub")}
+          >
+            <Github className="h-4 w-4" />
+            <span className="hidden sm:inline">{t("GitHub")}</span>
+          </a>
           <a
             href="https://buymeacoffee.com/vineeth_k_v"
             target="_blank"

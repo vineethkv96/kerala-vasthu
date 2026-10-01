@@ -1,6 +1,9 @@
+import { Github } from "lucide-react";
 import type { PageId } from "./nav";
 import { navItems } from "./nav";
 import { useI18n } from "../i18n";
+
+const GITHUB_URL = "https://github.com/vineethkv96/kerala-vasthu";
 
 interface SidebarProps {
   active: PageId;
@@ -33,11 +36,25 @@ export default function Sidebar({ active, onNavigate }: SidebarProps) {
           );
         })}
       </nav>
-      <p className="mt-auto px-3 text-[11px] leading-relaxed text-temple-800/60">
-        {t(
-          "Traditional Kerala Vasthu guidance. Not a substitute for engineering or legal approval.",
-        )}
-      </p>
+      <div className="mt-auto space-y-3">
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-temple-800 transition hover:bg-temple-900/5"
+        >
+          <Github className="h-4 w-4" />
+          GitHub
+          <span className="ml-auto text-[10px] font-normal text-temple-800/60">
+            {t("Open for contributions")}
+          </span>
+        </a>
+        <p className="px-3 text-[11px] leading-relaxed text-temple-800/60">
+          {t(
+            "Traditional Kerala Vasthu guidance. Not a substitute for engineering or legal approval.",
+          )}
+        </p>
+      </div>
     </aside>
   );
 }

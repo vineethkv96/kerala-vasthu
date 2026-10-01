@@ -23,6 +23,9 @@ const ml: Record<string, string> = {
   "Kol · Viral · Ayadi": "കോൽ · വിരൽ · ആയാദി",
   "Toggle language": "ഭാഷ മാറ്റുക",
   "Buy me a coffee": "എനിക്ക് ഒരു കാപ്പി വാങ്ങിത്തരൂ",
+  GitHub: "ഗിറ്റ്ഹബ്",
+  "View on GitHub": "ഗിറ്റ്ഹബിൽ കാണുക",
+  "Open for contributions": "സംഭാവനകൾക്കായി തുറന്നിരിക്കുന്നു",
 
   // Sidebar
   "Traditional Kerala Vasthu guidance. Not a substitute for engineering or legal approval.":
