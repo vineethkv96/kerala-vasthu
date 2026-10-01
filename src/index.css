@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-cream-50 text-temple-900 antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-white shadow-card ring-1 ring-temple-900/5;
+  }
+  .input-base {
+    @apply w-full rounded-lg border border-temple-900/15 bg-white px-3 py-2 text-sm text-temple-900 shadow-sm outline-none transition placeholder:text-temple-900/35 focus:border-temple-500 focus:ring-2 focus:ring-temple-500/25;
+  }
+  .label-base {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-temple-800/80;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-temple-700 text-white hover:bg-temple-800 focus:ring-temple-600;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-temple-800 ring-1 ring-temple-900/15 hover:bg-cream-100 focus:ring-temple-500;
+  }
+  .btn-ghost {
+    @apply btn text-temple-800 hover:bg-temple-900/5 focus:ring-temple-500;
+  }
+  .btn-terracotta {
+    @apply btn bg-terracotta-600 text-white hover:bg-terracotta-700 focus:ring-terracotta-500;
+  }
+  .chip {
+    @apply inline-flex cursor-pointer items-center gap-1 rounded-full border border-temple-900/15 bg-white px-3 py-1 text-xs font-medium text-temple-800 transition hover:border-temple-500 hover:bg-temple-50;
+  }
+  .chip-active {
+    @apply border-temple-600 bg-temple-700 text-white hover:bg-temple-800;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-area {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
