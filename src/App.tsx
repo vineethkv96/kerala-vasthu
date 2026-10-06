@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import AppLayout from "./components/AppLayout";
 import type { PageId } from "./components/nav";
 import Home from "./pages/Home";
@@ -30,25 +31,28 @@ export default function App() {
   }
 
   return (
-    <AppLayout active={page} onNavigate={setPage}>
-      {page === "home" && <Home onNavigate={setPage} />}
-      {page === "room" && (
-        <RoomCalculator
-          initial={editRoom}
-          onConsumed={() => setEditRoom(null)}
-        />
-      )}
-      {page === "ayadi" && (
-        <AyadiCalculator
-          initial={editAyadi}
-          onConsumed={() => setEditAyadi(null)}
-        />
-      )}
-      {page === "converter" && <UnitConverterPage />}
-      {page === "reference" && <TraditionalReference />}
-      {page === "saved" && (
-        <SavedCalculations onEditRoom={openRoom} onEditAyadi={openAyadi} />
-      )}
-    </AppLayout>
+    <>
+      <AppLayout active={page} onNavigate={setPage}>
+        {page === "home" && <Home onNavigate={setPage} />}
+        {page === "room" && (
+          <RoomCalculator
+            initial={editRoom}
+            onConsumed={() => setEditRoom(null)}
+          />
+        )}
+        {page === "ayadi" && (
+          <AyadiCalculator
+            initial={editAyadi}
+            onConsumed={() => setEditAyadi(null)}
+          />
+        )}
+        {page === "converter" && <UnitConverterPage />}
+        {page === "reference" && <TraditionalReference />}
+        {page === "saved" && (
+          <SavedCalculations onEditRoom={openRoom} onEditAyadi={openAyadi} />
+        )}
+      </AppLayout>
+      <Analytics />
+    </>
   );
 }
